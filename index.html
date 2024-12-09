@@ -297,7 +297,9 @@
                      </div>
                </form>
                <script>
-                  document.getElementById("enviarWhatsapp").addEventListener("click", function() {
+                  document.getElementById("enviarWhatsapp").addEventListener("click", function(event) {
+                    event.preventDefault(); // Evitar que el formulario se envíe y la página se recargue
+                
                     // Obtener los datos del formulario
                     var nombre = document.getElementById("nombre").value;
                     var mail = document.getElementById("mail").value;
