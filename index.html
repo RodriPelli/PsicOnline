@@ -296,34 +296,35 @@
                         <button class="send_btn" id="enviarWhatsapp">Enviar</button>
                      </div>
                </form>
-              <script>
-  document.getElementById("enviarWhatsapp").addEventListener("click", function() {
-    // Obtener los datos del formulario
-    var nombre = document.getElementById("nombre").value;
-    var mail = document.getElementById("mail").value;
-    var numero = document.getElementById("numero").value;
-    var texto = document.getElementById("texto").value;
-
-    // Validar que todos los campos estén completos
-    if (nombre === "" || mail === "" || numero === "" || texto === "") {
-      alert("Por favor, completa todos los campos.");
-      return; // Detener la ejecución si hay campos vacíos
-    }
-    // Validar que el correo electrónico tenga un "@"
-    if (!mail.includes("@")) {
-      alert("Por favor, ingresa un correo electrónico válido.");
-      return; // Detener la ejecución si no hay "@"
-    }
-    // Construir el mensaje para WhatsApp
-    var mensaje = "Hola, me llamo " + nombre + ".\nMi correo electrónico es: " + mail + ".\nMi numero de telefono es: " + numero + ".\nMi consulta es " + texto;
-
-    // Redirigir al enlace de WhatsApp
-window.open = "https://wa.me/542216754168?text=" + encodeURIComponent(mensaje); 
-  });
-  document.getElementById("numero").addEventListener("input", function() {
-    this.value = this.value.replace(/[^0-9]/g, ''); // Eliminar caracteres no numéricos
-  });
-</script>
+               <script>
+                  document.getElementById("enviarWhatsapp").addEventListener("click", function() {
+                    // Obtener los datos del formulario
+                    var nombre = document.getElementById("nombre").value;
+                    var mail = document.getElementById("mail").value;
+                    var numero = document.getElementById("numero").value;
+                    var texto = document.getElementById("texto").value;
+                
+                    // Validar que todos los campos estén completos
+                    if (nombre === "" || mail === "" || numero === "" || texto === "") {
+                      alert("Por favor, completa todos los campos.");
+                      return; // Detener la ejecución si hay campos vacíos
+                    }
+                    // Validar que el correo electrónico tenga un "@"
+                    if (!mail.includes("@")) {
+                      alert("Por favor, ingresa un correo electrónico válido.");
+                      return; // Detener la ejecución si no hay "@"
+                    }
+                    // Construir el mensaje para WhatsApp
+                    var mensaje = "Hola, me llamo " + nombre + ".\nMi correo electrónico es: " + mail + ".\nMi numero de telefono es: " + numero + ".\nMi consulta es " + texto;
+                
+                    // Redirigir al enlace de WhatsApp
+                    window.open("https://wa.me/542216754168?text=" + encodeURIComponent(mensaje), "_blank"); 
+                  });
+                
+                  document.getElementById("numero").addEventListener("input", function() {
+                    this.value = this.value.replace(/[^0-9]/g, ''); // Eliminar caracteres no numéricos
+                  });
+                </script>
  
             </div>
          </div>
