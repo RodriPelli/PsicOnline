@@ -318,7 +318,7 @@
     var mensaje = "Hola, me llamo " + nombre + ".\nMi correo electrónico es: " + mail + ".\nMi numero de telefono es: " + numero + ".\nMi consulta es " + texto;
 
     // Redirigir al enlace de WhatsApp
-    window.location.href = "https://api.whatsapp.com/send?phone=542216754168&text=" + encodeURIComponent(mensaje); 
+    window.location.href = "https://wa.me/542216754168&text=" + encodeURIComponent(mensaje); 
   });
   document.getElementById("numero").addEventListener("input", function() {
     this.value = this.value.replace(/[^0-9]/g, ''); // Eliminar caracteres no numéricos
