@@ -88,7 +88,7 @@
                                  <a class="nav-link" href="#team"> Team </a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="#contacto"> Contacto </a>
+                                 <a class="nav-link" href="C:\Users\valentina\Desktop\psicoline\PsicOnline\contacto.html"> Contacto </a>
                               </li>
                            </ul>
                         </div>
@@ -272,75 +272,7 @@
    </div>
    <!-- end team  section -->
    
-   <!-- contact  section -->
-   <div id="contacto" class="contact ">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12">
-               <div class="titlepage">
-                  <h2><strong class="yellow">Contacto</strong><br>Escribinos para asesorarte mejor</h2>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-8 offset-md-2">
-               <form id="post_form" class="contact_form">
-                  <div class="row">
-                     <div class="col-md-12 ">
-                        <input class="contact_control" id="nombre" placeholder="Nombre" type="text" name="Nombre">
-                     </div>
-                     <div class="col-md-12">
-                        <input class="contact_control" id="mail" placeholder="Mail" type="email" name="Mail">
-                     </div>
-                     <div class="col-md-12">
-                        <input class="contact_control" id="numero" placeholder="Numero de telefono " type="tel" name="Numero de telefono">
-                     </div>
-                     <div class="col-md-12">
-                        <textarea class="textarea" id="texto" placeholder="Mensaje" name="Mensaje"></textarea>
-                     </div>
-                     <div class="col-md-12">
-                        <button class="send_btn" id="enviarWhatsapp">Enviar</button>
-                     </div>
-               </form>
-               <script>
-                  document.getElementById("enviarWhatsapp").addEventListener("click", function(event) {
-                    event.preventDefault(); // Evitar que el formulario se envíe y la página se recargue
-                
-                    // Obtener los datos del formulario
-                    var nombre = document.getElementById("nombre").value;
-                    var mail = document.getElementById("mail").value;
-                    var numero = document.getElementById("numero").value;
-                    var texto = document.getElementById("texto").value;
-                
-                    // Validar que todos los campos estén completos
-                    if (nombre === "" || mail === "" || numero === "" || texto === "") {
-                      alert("Por favor, completa todos los campos.");
-                      return; // Detener la ejecución si hay campos vacíos
-                    }
-                    // Validar que el correo electrónico tenga un "@"
-                    if (!mail.includes("@")) {
-                      alert("Por favor, ingresa un correo electrónico válido.");
-                      return; // Detener la ejecución si no hay "@"
-                    }
-                    // Construir el mensaje para WhatsApp
-                    var mensaje = "Hola, me llamo " + nombre + ".\nMi correo electrónico es: " + mail + ".\nMi numero de telefono es: " + numero + ".\nMi consulta es " + texto;
-                
-                    // Redirigir al enlace de WhatsApp
-                    window.open("https://wa.me/542216754168?text=" + encodeURIComponent(mensaje), "_blank"); 
-                  });
-                
-                  document.getElementById("numero").addEventListener("input", function() {
-                    this.value = this.value.replace(/[^0-9]/g, ''); // Eliminar caracteres no numéricos
-                  });
-                </script>
- 
-            </div>
-         </div>
-      </div>
-   </div>
-   </div>
    
-   <!-- end contact  section -->
    <!--  footer -->
    <footer>
       <div class="footer">
@@ -361,7 +293,7 @@
                            </i>NOSOTROS
                     
                      <li> <a href="#team"></i>TEAM</a></li>
-                     <li> <a href="#contacto"></i>CONTACTO</a></li>
+                     <li> <a href="PsicOnline\contacto.html"></i>CONTACTO</a></li>
                   </ul>
                </div>
             </div>
